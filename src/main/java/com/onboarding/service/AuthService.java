@@ -40,6 +40,8 @@ public class AuthService {
                 UserRole.USER
         );
 
+        userRepository.save(user);
+
         return new SignUpResponseDto(user);
     }
 
