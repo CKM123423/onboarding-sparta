@@ -38,6 +38,7 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.24.2'
 }
 
 tasks.named('test') {
