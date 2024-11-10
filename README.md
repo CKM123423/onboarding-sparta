@@ -7,6 +7,7 @@
    - [AOP](#AOP)
 3. [Spring Security 란?](#Spring-Security-란?)
 4. [JWT란 무엇인가요?](#JWT란-무엇인가요?)
+5. [EC2 배포](#EC2-배포)
    
 ## Filter란 무엇인가? (with interceptor, AOP)
 ### Filter
@@ -63,3 +64,10 @@ JWT의 사용이유는 HTTP는 기본적으로 **무상태(state-less)를 지향
 3. Signature : Header와 Payload를 조합하여 비밀 키로 서명한 값
 
 다만 JWT는 누구나 쉽게 정보를 볼 수 있기 때문에 **중요하고 민감한 정보는 담지 않습니다.**
+
+
+### EC2 배포
+![ec2 배포](https://github.com/user-attachments/assets/5c012f96-460c-489d-8621-499ee874acdc)
+
+
+
