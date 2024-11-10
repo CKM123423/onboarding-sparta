@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.onboarding.enums.UserRole;
 import com.onboarding.exception.customexception.InvalidTokenException;
+import jakarta.servlet.http.HttpServletRequest;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -60,7 +61,7 @@ class JwtProviderTest {
     @DisplayName("HttpServletRequest Get Header Test")
     public void getJwtFromHeaderTest() {
         String testToken = "Bearer sample.token.here";
-        MockHttpServletRequest request = new MockHttpServletRequest();
+        HttpServletRequest request = Mockito.mock(HttpServletRequest.class);
         Mockito.when(request.getHeader(JwtProvider.ACCESS_HEADER)).thenReturn(testToken);
 
         String token = jwtProvider.getJwtFromHeader(request, JwtProvider.ACCESS_HEADER);
